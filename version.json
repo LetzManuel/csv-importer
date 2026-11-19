@@ -1,9 +1,9 @@
 {
-  "version": "0.15.2",
+  "version": "0.15.3",
   "notes": [
-    "Approve and learn: a value that exists in Coupa but is not documented (e.g. a new approval chain type) is learned as allowed, offered in the dropdown and never flagged again",
-    "Choose where it is valid: this environment, all environments of the customer, or everyone",
-    "Custom fields & data › Learned values lists everything learned, with Undo"
+    "Approve and learn works on every error and warning: accept it for one value or for the whole column, in this environment, for the customer or for everyone",
+    "Approve and learn all like this in one step, in the Findings panel and the Builder",
+    "Custom fields & data › Learned lists what was learned, when, in which file and field, with Turn back into error"
   ],
-  "builtAt": "2026-11-19T16:51:18.665Z"
+  "builtAt": "2026-11-19T17:03:05.426Z"
 }
