@@ -1,9 +1,7 @@
 {
-  "version": "0.15.3",
+  "version": "0.15.4",
   "notes": [
-    "Approve and learn works on every error and warning: accept it for one value or for the whole column, in this environment, for the customer or for everyone",
-    "Approve and learn all like this in one step, in the Findings panel and the Builder",
-    "Custom fields & data › Learned lists what was learned, when, in which file and field, with Turn back into error"
+    "Approve and learn: the widest scope is now called \"All my customers\". It stays in your own account and is never shared with other users"
   ],
-  "builtAt": "2026-11-19T17:03:05.426Z"
+  "builtAt": "2026-11-19T17:05:54.027Z"
 }
