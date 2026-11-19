@@ -7372,7 +7372,7 @@ const Upd = {
   },
   async offer() {
     try { Upd.info = await (await fetch('version.json', { cache: 'no-store' })).json(); } catch (e) { Upd.info = null; }
-    if (Upd.info?.version === APP_VERSION) return;
+    if (Upd.info?.version === APP_VERSION && (!Upd.info?.builtAt || Upd.info.builtAt === window.BUILT_AT)) return; // same version rebuilt (e.g. new settings) still offers the update
     document.querySelector('.upd-bar')?.remove();
     const b = document.createElement('div'); b.className = 'upd-bar';
     b.innerHTML = `<span><b>Update available${Upd.info?.version ? ': v' + U.esc(Upd.info.version) : ''}</b><br><span class="small" style="opacity:.8">Your data and offline work stay as they are.</span></span><button class="btn sm" data-act="upd-notes">What's new</button><button class="btn sm pri" data-act="upd-go">Update now</button><button class="btn ghost sm" data-act="upd-later" aria-label="Later" style="color:#fff">✕</button>`;
