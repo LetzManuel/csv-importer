@@ -6951,7 +6951,7 @@ const Sync = {
 
   /* ---------------- boot ---------------- */
   async init() {
-    Sync._cfg = { ...Sync.defaults(), ...((await DB.get('meta', 'sync')) || {}) };
+    Sync._cfg = { ...Sync.defaults(), ...((await DB.get('meta', 'sync')) || {}) }; if (!Sync._cfg.clientId) Sync._cfg.clientId = Sync.defaults().clientId; // built-in ID fills an empty one
     for (const r of await DB.all('syncstate')) Sync.st.set(r.id, r);
     Sync.count();
     const q = new URLSearchParams(location.search);
