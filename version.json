@@ -1,17 +1,9 @@
 {
-  "version": "0.14.0",
+  "version": "0.15.0",
   "notes": [
-    "Library: every file sorted by customer, Test or PROD, and import format",
-    "File names follow Format-Environment-Customer-Date; an existing name asks Replace or Save as v2",
-    "Cloud sync with your OneDrive or SharePoint, offline first, with shared folders",
-    "Changes from two devices merge; the same value changed twice asks you which one to keep",
-    "Installable app for laptop and phone, with this update notice",
-    "Table works like Excel: arrow keys, filter and sort on every column, Ctrl+F search",
-    "ƒx Fill with 113 Excel functions (German or English names) for the rows shown",
-    "Enrich from another file (like XLOOKUP) with 10 example records side by side",
-    "Split view: two tables side by side, lined up by a key column",
-    "Mark records as done (Ctrl+Enter) and filter by done / not done",
-    "Every problem: Fix all like this, Set a value for all, Ignore all"
+    "New Workbench look: Excel-style grid with column letters and row numbers, Postman-style tabs and a flat toolbar",
+    "New logo that stays readable from favicon size to app icon",
+    "Formula bar above the Table: shows the cell address, column name and full value, edit it there and press Enter"
   ],
-  "builtAt": "2026-11-19T12:19:07.385Z"
+  "builtAt": "2026-11-19T12:45:51.608Z"
 }
