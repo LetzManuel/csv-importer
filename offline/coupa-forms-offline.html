@@ -6942,7 +6942,10 @@ Object.assign(ICON, {
  * decides (Mine / Theirs) on the Cloud sync page. Until then that record is not uploaded, so nothing is overwritten. */
 const Sync = {
   GRAPH: 'https://graph.microsoft.com/v1.0',
-  SCOPES: 'openid profile offline_access User.Read Files.ReadWrite.All',
+  // own OneDrive only by default (users can usually approve this themselves); folders shared by others need .All, requested only when switched on
+  SCOPES_OWN: 'openid profile offline_access User.Read Files.ReadWrite',
+  SCOPES_SHARED: 'openid profile offline_access User.Read Files.ReadWrite.All',
+  get SCOPES() { return Sync._cfg?.wantShared ? Sync.SCOPES_SHARED : Sync.SCOPES_OWN; },
   _cfg: null, st: new Map(), busy: false, lastRun: null, lastErr: null, pending: 0, conflicts: 0,
   defaults() { return { id: 'sync', on: false, clientId: (window.SYNC_DEFAULTS && SYNC_DEFAULTS.clientId) || '', tenant: (window.SYNC_DEFAULTS && SYNC_DEFAULTS.tenant) || 'organizations', folder: 'CSV Importer', roots: [], account: null, tok: null }; },
   cfg() { return Sync._cfg; },
@@ -7323,6 +7326,7 @@ Object.assign(ACT, {
   'sync-toggle': async () => { Sync._cfg.on = !Sync._cfg.on; await Sync.saveCfg(); if (Sync._cfg.on) Sync.run(); renderPage(); },
   'sync-cfg': async () => { const c = Sync._cfg; c.clientId = document.getElementById('sy-cid').value.trim(); c.tenant = document.getElementById('sy-ten').value; c.folder = document.getElementById('sy-fold').value.trim() || 'CSV Importer'; await Sync.saveCfg(); toast('Saved'); renderPage(); },
   'sync-shared': async () => {
+    if (!Sync._cfg.wantShared) { if (!(await Modal.confirm('Allow folders shared with you?', '<p>To read and write folders that colleagues share with you, the app needs one more Microsoft permission (<span class="mono">Files.ReadWrite.All</span>). Some companies require an administrator to approve it.</p><p>You will be asked to sign in again.</p>', 'Sign in again'))) return; Sync._cfg.wantShared = true; await Sync.saveCfg(); Sync.login(); return; }
     try { const found = await Sync.sharedFolders(); const c = Sync._cfg; const have = new Map((c.roots || []).map((r) => [r.itemId, r])); c.roots = found.map((f) => ({ ...f, on: have.get(f.itemId)?.on || false })); await Sync.saveCfg(); toast(U.plural(found.length, 'shared folder') + ' found'); renderPage(); } catch (e) { toast('Could not list shared folders: ' + e.message, 6000); }
   },
   'sync-root': async (el) => { const r = Sync._cfg.roots[+el.dataset.i]; r.on = el.checked; await Sync.saveCfg(); if (r.on) Sync.run().then(() => renderPage()); },
