@@ -1,10 +1,9 @@
 {
-  "version": "0.15.1",
+  "version": "0.15.2",
   "notes": [
-    "New name: CSV Importer",
-    "New logo: a data sheet with a CSV header and an import arrow",
-    "Light grey sidebar",
-    "Rose corporate design from the logo: buttons, links, active cell and tabs"
+    "Approve and learn: a value that exists in Coupa but is not documented (e.g. a new approval chain type) is learned as allowed, offered in the dropdown and never flagged again",
+    "Choose where it is valid: this environment, all environments of the customer, or everyone",
+    "Custom fields & data › Learned values lists everything learned, with Undo"
   ],
-  "builtAt": "2026-11-19T13:22:04.622Z"
+  "builtAt": "2026-11-19T16:51:18.665Z"
 }
