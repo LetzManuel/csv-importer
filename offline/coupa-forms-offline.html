@@ -7271,6 +7271,7 @@ const Sync = {
     else if (Sync.busy) { t = 'Syncing…'; cls = 'wait'; }
     else if (Sync.lastErr) { t = 'Sync problem'; cls = 'bad'; }
     else { t = 'OneDrive synced ' + (c.lastSync ? new Date(c.lastSync).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : ''); cls = 'ok'; }
+    const sv = document.getElementById('savestate'); if (sv && c?.on && /All data stays on this device/.test(sv.textContent)) sv.lastChild.textContent = 'Saved on this device, copied to your OneDrive';
     el.innerHTML = `<button class="sync-pill ${cls}" data-act="nav" data-page="sync" title="${U.esc(Sync.lastErr || '')}">${U.esc(t)}</button>`;
   },
 };
