@@ -7172,7 +7172,7 @@ const Upd = {
     const watch = (w) => w && w.addEventListener('statechange', () => { if (w.state === 'installed' && navigator.serviceWorker.controller) Upd.offer(); });
     if (Upd.reg.waiting && navigator.serviceWorker.controller) Upd.offer();
     Upd.reg.addEventListener('updatefound', () => watch(Upd.reg.installing));
-    let reloading = false; navigator.serviceWorker.addEventListener('controllerchange', () => { if (reloading) return; reloading = true; location.reload(); });
+    let reloading = false; const hadCtl = !!navigator.serviceWorker.controller; navigator.serviceWorker.addEventListener('controllerchange', () => { if (reloading || !hadCtl) return; /* first install: no reload needed */ reloading = true; location.reload(); });
     const check = () => Upd.reg.update().catch(() => {});
     window.addEventListener('online', check); setInterval(check, 30 * 60000); check();
   },

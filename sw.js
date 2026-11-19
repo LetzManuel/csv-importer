@@ -1,5 +1,5 @@
 // Coupa Forms 0.15.0. Caches only the app's own files, never data or Microsoft/Coupa traffic.
-const CACHE = 'coupa-forms-0.15.0-mwnjmzj3';
+const CACHE = 'coupa-forms-0.15.0-mwnjoa1l';
 const FILES = ["./","index.html","manifest.webmanifest","icon-192.png","icon-512.png","icon-180.png"];
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(CACHE).then((c) => c.addAll(FILES))); }); // waits until the user clicks "Update now"
 self.addEventListener('message', (e) => { if (e.data === 'skip-waiting') self.skipWaiting(); });
