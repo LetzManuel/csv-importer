@@ -1,9 +1,10 @@
 {
-  "version": "0.15.0",
+  "version": "0.15.1",
   "notes": [
-    "New Workbench look: Excel-style grid with column letters and row numbers, Postman-style tabs and a flat toolbar",
-    "New logo that stays readable from favicon size to app icon",
-    "Formula bar above the Table: shows the cell address, column name and full value, edit it there and press Enter"
+    "New name: CSV Importer",
+    "New logo: a data sheet with a CSV header and an import arrow",
+    "Light grey sidebar",
+    "Rose corporate design from the logo: buttons, links, active cell and tabs"
   ],
-  "builtAt": "2026-11-19T12:46:52.323Z"
+  "builtAt": "2026-11-19T13:22:04.622Z"
 }

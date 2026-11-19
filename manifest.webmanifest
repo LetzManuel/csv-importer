@@ -1,12 +1,12 @@
 {
-  "name": "Coupa Forms",
-  "short_name": "Coupa Forms",
+  "name": "CSV Importer",
+  "short_name": "CSV Importer",
   "description": "Check, fix and build Coupa CSV import files. Works offline.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f4f6f9",
-  "theme_color": "#107c41",
+  "background_color": "#ffffff",
+  "theme_color": "#C2185B",
   "icons": [
     {
       "src": "icon-192.png",
