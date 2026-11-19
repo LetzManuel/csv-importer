@@ -6993,6 +6993,7 @@ Pages.sync = () => {
       ${c.ownRoot?.webUrl ? `<p class="small" style="margin-top:10px"><a href="${U.esc(c.ownRoot.webUrl)}" target="_blank" rel="noopener">Open my Coupa Forms folder in OneDrive</a></p>` : ''}
     </div></div>
   </div>
+  ${window.PWA ? `<p class="small" style="margin-top:16px">Need a copy without the internet or the installed app? <a href="offline/coupa-forms-offline.html" download>Download the offline single file</a>. Open it from disk; it has everything except cloud sync.</p>` : ''}
   <div class="card" style="margin-top:16px"><div class="hd"><h2>What syncs and what never does</h2></div>
     <div class="bd grid2 small"><div><b>Synced</b><ul><li>Customers, and per Test and PROD environment: custom fields, reference data, lookup files, contract types, synonyms</li><li>Every file with its rows, done marks, ignored problems, Coupa errors and change log</li><li>Error knowledge, edited Coupa tables, value synonyms, form types</li></ul></div>
     <div><b>Never synced</b><ul><li>Coupa API connections, client secrets and tokens, the API send history</li><li>Your Microsoft sign-in</li><li>View settings such as filters and sorting</li></ul>
