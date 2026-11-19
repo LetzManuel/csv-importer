@@ -1,4 +1,4 @@
-# Coupa Forms (installable app)
+# CSV Importer (installable app)
 
 The built, installable web app for checking, fixing and building Coupa CSV import files. It works offline.
 Open https://letzmanuel.github.io/csv-importer/ and install it from the browser.
