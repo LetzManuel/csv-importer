@@ -1,8 +1,9 @@
 {
-  "version": "0.17.1",
+  "version": "0.18.0",
   "notes": [
-    "Logo is now the Parto P in a circle with a pink data sheet flying in, like the other Parto apps",
+    "New parto payload look: logo, app icon, browser tab icon and colours (navy and coral)",
+    "Backups are now saved as parto-payload-backup-….json, the local API relay as parto-payload-relay.cmd, the offline file as parto-payload-offline.html. Older backups still import",
     "Your data, files and OneDrive folder stay as they are"
   ],
-  "builtAt": "2026-11-20T10:30:24.680Z"
+  "builtAt": "2026-11-20T10:42:26.222Z"
 }
