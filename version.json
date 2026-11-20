@@ -1,7 +1,9 @@
 {
-  "version": "0.15.4",
+  "version": "0.17.0",
   "notes": [
-    "Approve and learn: the widest scope is now called \"All my customers\". It stays in your own account and is never shared with other users"
+    "New name and logo: Parto Payload, part of the Parto platform (Punchout, Plugins, Projects, Payload)",
+    "New logo PPL in the sidebar, browser tab and on the home screen of installed apps",
+    "Your data, files and OneDrive folder stay as they are"
   ],
-  "builtAt": "2026-11-19T19:01:04.093Z"
+  "builtAt": "2026-11-20T10:23:50.187Z"
 }

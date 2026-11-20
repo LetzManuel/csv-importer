@@ -1,6 +1,6 @@
 {
-  "name": "CSV Importer",
-  "short_name": "CSV Importer",
+  "name": "Parto Payload",
+  "short_name": "Payload",
   "description": "Check, fix and build Coupa CSV import files. Works offline.",
   "start_url": "./",
   "scope": "./",
