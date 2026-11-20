@@ -1,9 +1,8 @@
 {
-  "version": "0.17.0",
+  "version": "0.17.1",
   "notes": [
-    "New name and logo: Parto Payload, part of the Parto platform (Punchout, Plugins, Projects, Payload)",
-    "New logo PPL in the sidebar, browser tab and on the home screen of installed apps",
+    "Logo is now the Parto P in a circle with a pink data sheet flying in, like the other Parto apps",
     "Your data, files and OneDrive folder stay as they are"
   ],
-  "builtAt": "2026-11-20T10:23:50.187Z"
+  "builtAt": "2026-11-20T10:30:24.680Z"
 }
