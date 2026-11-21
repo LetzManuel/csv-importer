@@ -1,9 +1,8 @@
 {
-  "version": "0.18.0",
+  "version": "0.18.1",
   "notes": [
-    "New parto payload look: logo, app icon, browser tab icon and colours (navy and coral)",
-    "Backups are now saved as parto-payload-backup-….json, the local API relay as parto-payload-relay.cmd, the offline file as parto-payload-offline.html. Older backups still import",
-    "Your data, files and OneDrive folder stay as they are"
+    "New address: https://payload.parto.at/. Install the app from there and sign in with Microsoft; your files come back from OneDrive",
+    "The old address shows a bar that syncs your latest changes and opens the new address"
   ],
-  "builtAt": "2026-11-20T10:42:26.222Z"
+  "builtAt": "2026-11-21T04:28:21.990Z"
 }
